@@ -1,0 +1,54 @@
+services:
+
+  ollama:
+    container_name: "ollama"
+    build:
+      context: src/ollama
+      dockerfile: Dockerfile
+    ports:
+      - "11434:11434"
+    environment:
+      PORT: 11434
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+  frontend:
+    container_name: "incariclient"
+    build:
+      context: src/frontend/
+      dockerfile: Dockerfile
+    command: streamlit run incariclient.py
+    ports:
+      - "8501:8501"
+    environment:
+      PORT: 8501
+
+  backend:
+    container_name: "incariengine"
+    build:
+      context: src/backend
+      dockerfile: Dockerfile
+    command: uvicorn incariengine:app --host 0.0.0.0 --port 8025
+    ports:
+      - "8025:8025"
+    environment:
+      PORT: 8025
+
+  tests:
+    container_name: "incaritest"
+    build:
+      context: src/tests
+      dockerfile: Dockerfile
+    command: pytest tests
+    ports:
+      - "8026:8026"
+    environment:
+      PORT: 8026
+
+networks:
+  default:
+    name: incari
