@@ -20,7 +20,7 @@ Running:
 
 ## Evaluation:
 1. In the evaluation section of the UI, give the actual and predicted values
-   1. Example: actual: [OnClick] [Delay] [Navigate]. predicted: [OnClick] [Delay]
+   1. Example: actual: `[OnClick] [Delay] [Navigate]`. predicted: `[OnClick] [Delay]`
 2. Click on evaluate to get the Bleu, Rouge and Minimum Edit distance scores
 
 ## Test cases:
