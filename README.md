@@ -5,9 +5,10 @@ This is my solution to the Incari assignment
 
 ## Pre requisite:
 Install Docker from [Here](https://docs.docker.com/engine/install/)
+
 Make sure you have at least 8 GB of space to store the docker images
 
-Running:
+## Running:
 1. Clone the repository using `git clone https://github.com/VishwaasHegde/IncariAssessment.git`
 2. Navigate to `IncariAssessment` folder using `cd IncariAssessment`
 3. Run the project with the command
