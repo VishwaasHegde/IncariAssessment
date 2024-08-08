@@ -8,7 +8,7 @@ Install Docker from [Here](https://docs.docker.com/engine/install/)
 Make sure you have at least 8 GB of space to store the docker images
 
 Running:
-1. Clone the repository
+1. Clone the repository using `git clone https://github.com/VishwaasHegde/IncariAssessment.git`
 2. Open the command line and give `cd IncariAssessment`
 3. Run the project with the command
    1. `docker compose -f docker-compose-gpu.yml up -d` if you have a GPU (Recommended)
