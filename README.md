@@ -9,7 +9,7 @@ Make sure you have at least 8 GB of space to store the docker images
 
 Running:
 1. Clone the repository using `git clone https://github.com/VishwaasHegde/IncariAssessment.git`
-2. Open the command line and give `cd IncariAssessment`
+2. Navigate to `IncariAssessment` folder using `cd IncariAssessment`
 3. Run the project with the command
    1. `docker compose -f docker-compose-gpu.yml up -d` if you have a GPU (Recommended)
    2. `docker compose -f docker-compose-cpu.yml up -d` if you have a CPU
@@ -24,11 +24,5 @@ Running:
 2. Click on evaluate to get the Bleu, Rouge and Minimum Edit distance scores
 
 ## Test cases:
-1. The above docker-compose will automatically run the test cases, which is another service in the docker-compose file
-2. To see the test results go to the command line and `docker logs incaritest`
-3. This should print the test results and you should see 7 test cases passes
-4. If this is not the case, you may have to run the tests again, this can happen if the container/image creation were not in order, that is if the test cases were run before the creation of the other modules
-5. If you have to run the test cases again: give the command `docker start -i incaritest`
-
-
-
+1. Run the test cases using the command `docker start -i incaritest`
+2. This should print the test results and you should see 7 test cases passes
