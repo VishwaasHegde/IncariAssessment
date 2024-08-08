@@ -3,7 +3,7 @@ This is my solution to the Incari assignment
 
 
 
-Pre requisite:
+## Pre requisite:
 Install Docker from [Here](https://docs.docker.com/engine/install/)
 Make sure you have at least 8 GB of space to store the docker images
 
@@ -18,12 +18,12 @@ Running:
 6. Go to the URL http://localhost:8501/
 7. Give an input in the chat window, example: "Navigate to a new page after a delay of 3 seconds when the user clicks a button." and then click `Send`
 
-Evaluation:
+## Evaluation:
 1. In the evaluation section of the UI, give the actual and predicted values
    1. Example: actual: [OnClick] [Delay] [Navigate]. predicted: [OnClick] [Delay]
 2. Click on evaluate to get the Bleu, Rouge and Minimum Edit distance scores
 
-Test cases:
+## Test cases:
 1. The above docker-compose will automatically run the test cases, which is another service in the docker-compose file
 2. To see the test results go to the command line and `docker logs incaritest`
 3. This should print the test results and you should see 7 test cases passes
