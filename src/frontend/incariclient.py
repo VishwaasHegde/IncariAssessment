@@ -3,7 +3,7 @@ from streamlit_chat import message
 from ui_components.pages import code_chat, evaluate
 
 st.title("AI-Powered Node Generation")
-st.subheader("A node generation engine")
+st.subheader("A node generation engine by Vishwaas")
 
 
 # Initialise session state variables
